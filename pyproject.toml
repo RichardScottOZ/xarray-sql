@@ -28,6 +28,7 @@ classifiers = [
 dependencies = [
   "xarray",
   "dask-sql",
+  "dask-expr",
 ]
 
 [project.optional-dependencies]
