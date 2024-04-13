@@ -28,14 +28,16 @@ classifiers = [
 dependencies = [
   "xarray",
   "dask-sql",
-  "dask-expr",
 ]
 
 [project.optional-dependencies]
-test = [
-  "pytest",
+io = [
   "xarray[io]",
   "gcsfs",
+]
+test = [
+  "xarray_sql[io]",
+  "pytest",
 ]
 dev = [
   "xarray_sql[test]",
@@ -43,7 +45,8 @@ dev = [
   "py-spy"
 ]
 demo = [
-  "coiled"
+  "xarray_sql[io]",
+  "coiled",
 ]
 
 [project.urls]
